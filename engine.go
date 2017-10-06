@@ -108,7 +108,7 @@ func NewEngine(opt EngineOptions) (*Engine, error) {
 	}
 
 	client := opt.Client
-	if client == 0 {
+	if client < 0 {
 		client = <-clientSeq
 	}
 
